@@ -68,16 +68,7 @@ const filteredArray = library.map(function(e) {
     }
 })
 
-
-function averageVoteMovie(type, genre) {
-    if (filteredArray.type == "movie") {
-        filteredArray.genre.forEach(element => {
-            const ratingSum = filteredArray.Movie.rating
-            return ratingSum += ratingSum
-        });
-    }
-}
-
+// MEDIA VOTI
 function averageVote(genre) {
     let totalRating = 0;
     let count = 0;
@@ -89,5 +80,18 @@ function averageVote(genre) {
     });
     return totalRating / count;
 }
+console.log(averageVote("Fantasy"));
 
-console.log(averageVote("Action"));
+
+// LISTA GENERI NON RIPETUTA
+function genreList() {
+    const genres = [];
+    filteredArray.forEach(e => {
+        if (!genres.includes(e.genre)) {
+            genres.push(e.genre);
+        }
+    });
+    return console.log(genres);
+}
+
+genreList();
