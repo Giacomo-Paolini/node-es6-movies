@@ -68,6 +68,26 @@ const filteredArray = library.map(function(e) {
     }
 })
 
-console.log(filteredArray)
-const film = new Movie("azz","2000","commedia","8.5","film")
-console.log(film.toString())
+
+function averageVoteMovie(type, genre) {
+    if (filteredArray.type == "movie") {
+        filteredArray.genre.forEach(element => {
+            const ratingSum = filteredArray.Movie.rating
+            return ratingSum += ratingSum
+        });
+    }
+}
+
+function averageVote(genre) {
+    let totalRating = 0;
+    let count = 0;
+    filteredArray.forEach(e => {
+        if (e.genre === genre) {
+            totalRating += e.rating;
+            count++;
+        }
+    });
+    return totalRating / count;
+}
+
+console.log(averageVote("Action"));
