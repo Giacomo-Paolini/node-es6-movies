@@ -40,10 +40,9 @@ class Movie {
         this.type = type;
     }
     toString() {
-        if (this.type == "movie") {
-            return "film";
+        if (this.type = "film") {
+            return `${this.title} è un ${this.type} di genere ${this.genre}. E' stato rilasciato nel ${this.year} ed ha un voto di ${this.rating}.`
         }
-        return `${this.title} è un ${this.type} di genere ${this.genre}. E' stato rilasciato nel ${this.year} ed ha un voto di ${this.rating}.`
     }
 }
 
@@ -53,10 +52,9 @@ class TvSeries extends Movie {
         this.seasons = seasons;
     }
     toString() {
-        if (this.type == "tvSeries") {
-            return "serie tv";
+        if (this.type = "serie tv") {
+            return `${this.title} è una ${this.type} di genere ${this.genre}. La prima stagione è stata rilasciata nel ${year} ed in totale sono state prodotte ${this.seasons}. Ha un voto di ${this.rating}.`
         }
-        return `${this.title} è una ${this.type} di genere ${this.genre}. La prima stagione è stata rilasciata nel ${year} ed in totale sono state prodotte ${this.seasons}. Ha un voto di ${this.rating}.`
     }
 }
 
@@ -95,3 +93,22 @@ function genreList() {
 }
 
 genreList();
+
+
+/*
+    Creiamo una funzione che filtri i film in base ad un genere passato come
+    argomento e ne ritorni un array con all’interno il risultato della 
+    funzione toString() di ogni film.
+*/
+
+function genreFilter(genre) {
+    const videoDescription = [];
+    filteredArray.forEach(e => {
+        if (e.genre === genre) {
+            videoDescription.push(e.toString());
+        }
+    })
+    return console.log(videoDescription);
+}
+
+genreFilter("Action");
