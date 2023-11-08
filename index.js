@@ -72,7 +72,8 @@ function averageVote(genre) {
             count++;
         }
     });
-    return totalRating / count;
+    const resultVote = totalRating / count;
+    return `Il voto medio del genere ${genre} è ${resultVote}`;
 }
 console.log(averageVote("Fantasy"));
 
@@ -85,18 +86,12 @@ function genreList() {
             genres.push(e.genre);
         }
     });
-    return console.log(genres);
+    return genres;
 }
+console.log(`I generi nell'array sono: ${genreList()}`);
 
-genreList();
 
-
-/*
-    Creiamo una funzione che filtri i film in base ad un genere passato come
-    argomento e ne ritorni un array con all’interno il risultato della 
-    funzione toString() di ogni film.
-*/
-
+// DESCRIZIONE PER GENERE
 function genreFilter(genre) {
     const videoDescription = [];
     filteredArray.forEach(e => {
