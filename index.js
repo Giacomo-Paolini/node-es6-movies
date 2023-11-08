@@ -40,9 +40,7 @@ class Movie {
         this.type = type;
     }
     toString() {
-        if (this.type = "film") {
-            return `${this.title} è un ${this.type} di genere ${this.genre}. E' stato rilasciato nel ${this.year} ed ha un voto di ${this.rating}.`
-        }
+        return `${this.title} è un film di genere ${this.genre}. E' stato rilasciato nel ${this.year} ed ha un voto di ${this.rating}.`
     }
 }
 
@@ -52,9 +50,7 @@ class TvSeries extends Movie {
         this.seasons = seasons;
     }
     toString() {
-        if (this.type = "serie tv") {
-            return `${this.title} è una ${this.type} di genere ${this.genre}. La prima stagione è stata rilasciata nel ${year} ed in totale sono state prodotte ${this.seasons}. Ha un voto di ${this.rating}.`
-        }
+        return `${this.title} è una serie tv di genere ${this.genre}. La prima stagione è stata rilasciata nel ${this.year} ed in totale sono state prodotte ${this.seasons}. Ha un voto di ${this.rating}.`
     }
 }
 
@@ -111,4 +107,4 @@ function genreFilter(genre) {
     return console.log(videoDescription);
 }
 
-genreFilter("Action");
+genreFilter("Fantasy");
